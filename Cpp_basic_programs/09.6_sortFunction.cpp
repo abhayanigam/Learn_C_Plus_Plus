@@ -18,7 +18,7 @@ int main()
 
     cout << endl;
 
-    //To Sort in desending order
+    //To Sort in desending order.
     sort(arr, arr + n, greater<int>());
 
     cout << "Array after desending order sorting : \n";
