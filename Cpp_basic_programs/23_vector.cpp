@@ -5,6 +5,7 @@
 */
 
 #include <iostream>
+#include <algorithm>
 #include <vector>  //--> header file to use vectors
 using namespace std;
 
@@ -41,6 +42,13 @@ int main()
     cout << "Iterate using auto" << endl;
     for(auto element:v){
         cout << element << " ";
+    }
+    cout << endl;
+
+    cout << "Reversing array " << endl;
+    reverse(v.begin(),v.end());
+    for(auto i : v){
+        cout << i << " ";
     }
     cout << endl;
 
