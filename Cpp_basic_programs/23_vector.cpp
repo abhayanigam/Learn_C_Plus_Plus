@@ -116,5 +116,26 @@ int main()
         cout << endl;
     }
 
+     // Creating vector of vectors
+    vector<int> vector1 = {1, 2, 3};
+    vector<int> vector2 = {4, 5, 6};
+    vector<int> vector3 = {7, 8, 9};
+
+    // Creating a vector of vectors
+    vector<vector<int>> vectorOfVectors;
+
+    // Pushing vectors into the vector of vectors
+    vectorOfVectors.push_back(vector1);
+    vectorOfVectors.push_back(vector2);
+    vectorOfVectors.push_back(vector3);
+
+    // Accessing elements of the vector of vectors
+    for (const auto& vec : vectorOfVectors) {
+        for (int value : vec) {
+            cout << value << " ";
+        }
+        cout << endl;
+    }
+
     return 0;
 }
