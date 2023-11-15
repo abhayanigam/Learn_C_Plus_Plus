@@ -85,3 +85,36 @@ int main()
     } 
     cout << endl;
 }
+
+// Creating vector of arrays 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Creating arrays
+    int array1[] = {1, 2, 3};
+    int array2[] = {4, 5, 6};
+    int array3[] = {7, 8, 9};
+
+    // Creating a vector of pointers to arrays
+    vector<int *> vectorOfArrays;
+
+    vectorOfArrays.push_back(array1);
+    vectorOfArrays.push_back(array2);
+    vectorOfArrays.push_back(array3);
+
+    cout << "The size of the vector of arrays is : " << vectorOfArrays.size() << endl;
+
+    for (const auto &arr : vectorOfArrays)
+    {
+        for (size_t i = 0; i < 3; ++i)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
