@@ -20,6 +20,9 @@ int main()
     v.push_back(2); 
     v.push_back(1);
 
+    cout << v.begin();
+    cout << v.end()-1;
+    
     //To print the elements:
     cout << "Printing V values" << endl;
     for(int i=0; i<v.size(); i++){
