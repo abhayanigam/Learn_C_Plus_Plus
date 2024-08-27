@@ -20,6 +20,9 @@ int main()
     v.push_back(2); 
     v.push_back(1);
 
+    cout << v.begin();
+    cout << v.end()-1;
+    
     //To print the elements:
     cout << "Printing V values" << endl;
     for(int i=0; i<v.size(); i++){
@@ -84,4 +87,58 @@ int main()
         cout << v2[i] << " ";
     } 
     cout << endl;
+}
+
+// Creating vector of arrays 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Creating arrays
+    int array1[] = {1, 2, 3};
+    int array2[] = {4, 5, 6};
+    int array3[] = {7, 8, 9};
+
+    // Creating a vector of pointers to arrays
+    vector<int *> vectorOfArrays;
+
+    vectorOfArrays.push_back(array1);
+    vectorOfArrays.push_back(array2);
+    vectorOfArrays.push_back(array3);
+
+    cout << "The size of the vector of arrays is : " << vectorOfArrays.size() << endl;
+
+    for (const auto &arr : vectorOfArrays)
+    {
+        for (size_t i = 0; i < 3; ++i)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+
+     // Creating vector of vectors
+    vector<int> vector1 = {1, 2, 3};
+    vector<int> vector2 = {4, 5, 6};
+    vector<int> vector3 = {7, 8, 9};
+
+    // Creating a vector of vectors
+    vector<vector<int>> vectorOfVectors;
+
+    // Pushing vectors into the vector of vectors
+    vectorOfVectors.push_back(vector1);
+    vectorOfVectors.push_back(vector2);
+    vectorOfVectors.push_back(vector3);
+
+    // Accessing elements of the vector of vectors
+    for (const auto& vec : vectorOfVectors) {
+        for (int value : vec) {
+            cout << value << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
 }
